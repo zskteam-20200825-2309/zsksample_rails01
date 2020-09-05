@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
       end
 
       it "Nameが空白の場合、無効な状態である" do
-        #FactoryBotに登録したユーザー情報のemailを空白に変更
+        #FactoryBotに登録したユーザー情報のnameを空白に変更
         @user.name = " "
         expect(@user).to be_invalid
         @user.name = "test"
