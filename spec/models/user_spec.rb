@@ -38,8 +38,6 @@ RSpec.describe User, type: :model do
       it "一意性が正しく機能しているか" do
         #@userを複製してduplicate_userに格納
         duplicate_user = @user.dup
-        #@userのemailをduplicate_userのemailに格納
-        duplicate_user.email = @user.email
         @user.save!
         expect(duplicate_user).to be_invalid
       end
