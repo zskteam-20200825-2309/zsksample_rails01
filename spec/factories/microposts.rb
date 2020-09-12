@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :micropost do
+  factory :invalid_micropost, class: Micropost do
     content { 'MyText' }
-    user_id { 1 }
+    user_id { 2 }
   end
 end
