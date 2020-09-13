@@ -15,12 +15,17 @@ require 'rails_helper'
 RSpec.describe '/microposts', type: :request do
   # Micropost. As you add validations to Micropost, be sure to
   # adjust the attributes here as well.
+  before(:each) do
+    user = FactoryBot.attributes_for(:user)
+    User.create! user
+  end
+
   let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+    FactoryBot.attributes_for(:micropost)
   end
 
   let(:invalid_attributes) do
-    skip('Add a hash of attributes invalid for your model')
+    FactoryBot.attributes_for(:invalid_micropost_2)
   end
 
   describe 'GET /index' do
@@ -85,14 +90,15 @@ RSpec.describe '/microposts', type: :request do
   describe 'PATCH /update' do
     context 'with valid parameters' do
       let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
+        FactoryBot.attributes_for(:new_micropost)
       end
 
       it 'updates the requested micropost' do
         micropost = Micropost.create! valid_attributes
         patch micropost_url(micropost), params: { micropost: new_attributes }
+        # インスタンスの値を更新している
         micropost.reload
-        skip('Add assertions for updated state')
+        expect(micropost.content).to eq('YourText')
       end
 
       it 'redirects to the micropost' do
