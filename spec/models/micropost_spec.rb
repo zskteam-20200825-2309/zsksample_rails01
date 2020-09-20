@@ -6,11 +6,16 @@ RSpec.describe Micropost, type: :model do
   before do
     @user = FactoryBot.create(:user)
     @micropost = @user.microposts.create(content: 'example')
+    @micropost.image = fixture_file_upload('test_image.jpg', 'image/jpg')
   end
 
   context 'when micropost is valid' do
     it 'contentとuser_idに値が入っている場合、有効な状態である' do
       expect(@micropost).to be_valid
+    end
+
+    it 'ActiveStorageで生成されたファイル名を格納したカラムに値が入っていることを確認' do
+      expect(@micropost.image.filename).not_to be_nil
     end
 
     it 'userを削除すると、userが書いたmicropostも削除される' do

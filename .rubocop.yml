@@ -9,6 +9,7 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
     - "bin/*"
+    - "db/migrate/*"
 
 # 日本語でのコメントを許可
 Style/AsciiComments:
