@@ -2,6 +2,10 @@
 
 <h1>Users</h1>
 
+<%# ユーザー数が30人以下の場合、ページネーションは表示されない %>
+
+<%= will_paginate @users %>
+
 <table>
   <thead>
     <tr>

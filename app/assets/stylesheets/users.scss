@@ -1,3 +1,21 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  padding: 0 0 80px 50px;
+  table{
+    thead tr th{
+      padding: 10px;
+      border: solid 1px;
+      text-align: center;
+      background-color: #AAA;
+    }
+    tbody tr td{
+      padding: 10px;
+      border: solid 1px;
+    }
+    .user_name{
+      width: 200px;
+    }
+    tbody tr:hover{
+      background-color: #EEE;
+    }
+  }
+}
