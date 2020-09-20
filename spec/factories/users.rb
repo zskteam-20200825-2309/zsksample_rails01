@@ -1,3 +1,5 @@
+require 'faker'
+
 FactoryBot.define do
   factory :user do
     id { 1 }
@@ -13,5 +15,10 @@ FactoryBot.define do
   factory :user2, class: User do
     name { 'testuser2' }
     email { 'test2@example.com' }
+  end
+
+  factory :fake_users, class: User do
+    name { Faker::Name.name }
+    email { Faker::Internet.email }
   end
 end

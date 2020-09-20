@@ -40,7 +40,7 @@ group :development do
   gem 'listen', '3.2.1'
   gem 'web-console', '4.0.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'rubocop', '0.87.1'
+  gem 'rubocop', '0.89'
   gem 'rubocop-rails', '2.6.0'
   gem 'spring'
   gem 'spring-commands-rspec', '1.0.4'
@@ -56,4 +56,9 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'bootstrap-sass', '3.4.1'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'faker', '2.1.2'
+gem 'jquery-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'will_paginate', '3.1.8'
