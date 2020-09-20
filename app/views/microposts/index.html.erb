@@ -10,7 +10,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @microposts.each do |micropost| %>
       <tr>
@@ -28,6 +27,7 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate %>
 
 <br>
 

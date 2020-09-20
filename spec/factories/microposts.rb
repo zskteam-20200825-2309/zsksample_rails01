@@ -18,4 +18,9 @@ FactoryBot.define do
     content { 'YourText' }
     user_id { 1 }
   end
+
+  factory :fake_micropost, class: Micropost do
+    content { Faker::Lorem.sentence }
+    user_id { 1 }
+  end
 end

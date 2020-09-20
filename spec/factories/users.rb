@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :user do
     id { 1 }
     name { 'test' }
-    sequence(:email) { 'Test1@example.com' }
+    email { 'Test@example.com' }
   end
 
   factory :invalid_user, class: User do
